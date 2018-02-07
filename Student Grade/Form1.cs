@@ -15,6 +15,7 @@ namespace Student_Grade
         //Declaring Variables
         String strStudentName, strStudentNumber, strGroup, strGrade = "";
         int intEnglish, intMaths, intScience = 0;
+        float faverage = 0;
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -27,11 +28,6 @@ namespace Student_Grade
         public frmStudentGrades()
         {
             InitializeComponent();
-        }
-
-        private void lblNumber_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -48,7 +44,7 @@ namespace Student_Grade
             //Accept response
             dr = MessageBox.Show("Are you sure you want to exit?", "Confirm Exit",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-           
+
             //if yes then close program
             if (dr == DialogResult.Yes)
             {
@@ -56,6 +52,43 @@ namespace Student_Grade
             }
         }
 
+        //Code to clear details
+        public void ClearDetails()
+        {
+            tbxStudentName.Text = "";
+            tbxStudentNumber.Text = "";
+            tbxGroup.Text = "";
 
+            tbxEnglish.Text = "";
+            txtMaths.Text = "";
+            txtScience.Text = "";
+
+            strStudentName = "";
+            strStudentNumber = "";
+
+            intEnglish = 0;
+            intMaths = 0;
+            intScience = 0;
+
+            fAverage = 0;
+        }
+
+        //Code for entering student details
+        public void EnterDetails()
+        {
+            strStudentName = tbxStudentName.Text;
+            strStudentNumber = tbxStudentNumber.Text;
+            strGroup = tbxGroup.Text;
+
+            intEnglish = Convert.ToInt32(tbxEnglish.Text);
+            intMaths = Convert.ToInt32(txtMaths.Text);
+            intScience = Convert.ToInt32(txtScience);
+        }
+
+        //code to enter Student Details
+        public void DisplayDetails()
+        {
+            lblStud
+        }
     }
 }

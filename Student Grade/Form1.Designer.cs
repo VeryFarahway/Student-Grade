@@ -40,19 +40,19 @@
             this.lblEnglish = new System.Windows.Forms.Label();
             this.lblMaths = new System.Windows.Forms.Label();
             this.gbxResults = new System.Windows.Forms.GroupBox();
-            this.lblScience = new System.Windows.Forms.Label();
-            this.lblDetails = new System.Windows.Forms.Label();
-            this.lblAverageMark = new System.Windows.Forms.Label();
+            this.lblStudentGradeResult = new System.Windows.Forms.Label();
+            this.lblAverageMarkResult = new System.Windows.Forms.Label();
+            this.lblStudentDetailsResults = new System.Windows.Forms.Label();
             this.lblStudentGrade = new System.Windows.Forms.Label();
+            this.lblAverageMark = new System.Windows.Forms.Label();
+            this.lblDetails = new System.Windows.Forms.Label();
+            this.lblScience = new System.Windows.Forms.Label();
             this.tbxStudentName = new System.Windows.Forms.TextBox();
             this.tbxStudentNumber = new System.Windows.Forms.TextBox();
             this.tbxGroup = new System.Windows.Forms.TextBox();
             this.tbxEnglish = new System.Windows.Forms.TextBox();
             this.txtMaths = new System.Windows.Forms.TextBox();
             this.txtScience = new System.Windows.Forms.TextBox();
-            this.lblStudentDetailsResults = new System.Windows.Forms.Label();
-            this.lblAverageMarkResult = new System.Windows.Forms.Label();
-            this.lblStudentGradeResult = new System.Windows.Forms.Label();
             this.gbxResults.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +123,6 @@
             this.lblNumber.Size = new System.Drawing.Size(126, 20);
             this.lblNumber.TabIndex = 6;
             this.lblNumber.Text = "Student Number";
-            this.lblNumber.Click += new System.EventHandler(this.lblNumber_Click);
             // 
             // lblGroup
             // 
@@ -175,24 +174,41 @@
             this.gbxResults.TabIndex = 11;
             this.gbxResults.TabStop = false;
             this.gbxResults.Text = "Results";
+           
             // 
-            // lblScience
+            // lblStudentGradeResult
             // 
-            this.lblScience.AutoSize = true;
-            this.lblScience.Location = new System.Drawing.Point(30, 337);
-            this.lblScience.Name = "lblScience";
-            this.lblScience.Size = new System.Drawing.Size(66, 20);
-            this.lblScience.TabIndex = 12;
-            this.lblScience.Text = "Science";
+            this.lblStudentGradeResult.AutoSize = true;
+            this.lblStudentGradeResult.Location = new System.Drawing.Point(276, 132);
+            this.lblStudentGradeResult.Name = "lblStudentGradeResult";
+            this.lblStudentGradeResult.Size = new System.Drawing.Size(0, 20);
+            this.lblStudentGradeResult.TabIndex = 18;
             // 
-            // lblDetails
+            // lblAverageMarkResult
             // 
-            this.lblDetails.AutoSize = true;
-            this.lblDetails.Location = new System.Drawing.Point(6, 43);
-            this.lblDetails.Name = "lblDetails";
-            this.lblDetails.Size = new System.Drawing.Size(119, 20);
-            this.lblDetails.TabIndex = 13;
-            this.lblDetails.Text = "Student Details";
+            this.lblAverageMarkResult.AutoSize = true;
+            this.lblAverageMarkResult.Location = new System.Drawing.Point(276, 86);
+            this.lblAverageMarkResult.Name = "lblAverageMarkResult";
+            this.lblAverageMarkResult.Size = new System.Drawing.Size(0, 20);
+            this.lblAverageMarkResult.TabIndex = 17;
+            // 
+            // lblStudentDetailsResults
+            // 
+            this.lblStudentDetailsResults.AutoSize = true;
+            this.lblStudentDetailsResults.BackColor = System.Drawing.SystemColors.Window;
+            this.lblStudentDetailsResults.Location = new System.Drawing.Point(276, 43);
+            this.lblStudentDetailsResults.Name = "lblStudentDetailsResults";
+            this.lblStudentDetailsResults.Size = new System.Drawing.Size(0, 20);
+            this.lblStudentDetailsResults.TabIndex = 16;
+            // 
+            // lblStudentGrade
+            // 
+            this.lblStudentGrade.AutoSize = true;
+            this.lblStudentGrade.Location = new System.Drawing.Point(6, 132);
+            this.lblStudentGrade.Name = "lblStudentGrade";
+            this.lblStudentGrade.Size = new System.Drawing.Size(115, 20);
+            this.lblStudentGrade.TabIndex = 15;
+            this.lblStudentGrade.Text = "Student Grade";
             // 
             // lblAverageMark
             // 
@@ -203,14 +219,23 @@
             this.lblAverageMark.TabIndex = 14;
             this.lblAverageMark.Text = "Average Mark";
             // 
-            // lblStudentGrade
+            // lblDetails
             // 
-            this.lblStudentGrade.AutoSize = true;
-            this.lblStudentGrade.Location = new System.Drawing.Point(6, 132);
-            this.lblStudentGrade.Name = "lblStudentGrade";
-            this.lblStudentGrade.Size = new System.Drawing.Size(115, 20);
-            this.lblStudentGrade.TabIndex = 15;
-            this.lblStudentGrade.Text = "Student Grade";
+            this.lblDetails.AutoSize = true;
+            this.lblDetails.Location = new System.Drawing.Point(6, 43);
+            this.lblDetails.Name = "lblDetails";
+            this.lblDetails.Size = new System.Drawing.Size(119, 20);
+            this.lblDetails.TabIndex = 13;
+            this.lblDetails.Text = "Student Details";
+            // 
+            // lblScience
+            // 
+            this.lblScience.AutoSize = true;
+            this.lblScience.Location = new System.Drawing.Point(30, 337);
+            this.lblScience.Name = "lblScience";
+            this.lblScience.Size = new System.Drawing.Size(66, 20);
+            this.lblScience.TabIndex = 12;
+            this.lblScience.Text = "Science";
             // 
             // tbxStudentName
             // 
@@ -253,31 +278,6 @@
             this.txtScience.Name = "txtScience";
             this.txtScience.Size = new System.Drawing.Size(100, 26);
             this.txtScience.TabIndex = 18;
-            // 
-            // lblStudentDetailsResults
-            // 
-            this.lblStudentDetailsResults.AutoSize = true;
-            this.lblStudentDetailsResults.BackColor = System.Drawing.SystemColors.Window;
-            this.lblStudentDetailsResults.Location = new System.Drawing.Point(276, 43);
-            this.lblStudentDetailsResults.Name = "lblStudentDetailsResults";
-            this.lblStudentDetailsResults.Size = new System.Drawing.Size(0, 20);
-            this.lblStudentDetailsResults.TabIndex = 16;
-            // 
-            // lblAverageMarkResult
-            // 
-            this.lblAverageMarkResult.AutoSize = true;
-            this.lblAverageMarkResult.Location = new System.Drawing.Point(276, 86);
-            this.lblAverageMarkResult.Name = "lblAverageMarkResult";
-            this.lblAverageMarkResult.Size = new System.Drawing.Size(0, 20);
-            this.lblAverageMarkResult.TabIndex = 17;
-            // 
-            // lblStudentGradeResult
-            // 
-            this.lblStudentGradeResult.AutoSize = true;
-            this.lblStudentGradeResult.Location = new System.Drawing.Point(276, 132);
-            this.lblStudentGradeResult.Name = "lblStudentGradeResult";
-            this.lblStudentGradeResult.Size = new System.Drawing.Size(0, 20);
-            this.lblStudentGradeResult.TabIndex = 18;
             // 
             // frmStudentGrades
             // 
