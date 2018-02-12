@@ -30,6 +30,7 @@ namespace Student_Grade
             InitializeComponent();
         }
 
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Halt();
@@ -50,6 +51,19 @@ namespace Student_Grade
             {
                 Application.Exit();
             }
+        }
+
+        //code for the calculate button
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            //Enter student details
+            EnterDetails();
+            //Calculate Average Mark
+            fAverage = AverageMark(intEnglish, intMaths, intScience);
+            //Calculate average Mark
+            strGrade = CalculateGrade(fAverage);
+            //DisplayDetails
+            DisplayDetails();
         }
 
         //Code to clear details
@@ -82,13 +96,47 @@ namespace Student_Grade
 
             intEnglish = Convert.ToInt32(tbxEnglish.Text);
             intMaths = Convert.ToInt32(txtMaths.Text);
-            intScience = Convert.ToInt32(txtScience);
+            intScience = Convert.ToInt32(txtScience.Text);
         }
 
         //code to enter Student Details
         public void DisplayDetails()
         {
-            lblStud
+            lblStudentDetailsResults.Text = strGroup + ":  " + strStudentNumber + ":  " + strStudentName;
+            lblAverageMarkResult.Text = fAverage.ToString("#0.00");
+            lblStudentGradeResult.Text = strGrade;
         }
+
+        //Function to calculate Average mark
+        public float AverageMark( int intNumber1, int intNumber2, int intNumber3)
+        {
+            float Average = (float)(intEnglish + intMaths + intScience) / 3;
+            return Average;
+        }
+
+        //Function to Enter Sturent Details
+        public string CalculateGrade(float Mark)
+        {
+            string strFinalGrade = "";
+            if (Mark >=80)
+            {
+                strFinalGrade = "You achieved a Distinction";
+            }
+            else if (Mark >=60)
+            {
+                strFinalGrade = "You achieved a Merit";
+            }
+            else if (Mark >=40)
+            {
+                strFinalGrade = "You achieved a Pass";
+            }
+            else
+            {
+                strFinalGrade = "You must take a resit";
+            }
+            return strFinalGrade;
+        }
+        
+
     }
 }

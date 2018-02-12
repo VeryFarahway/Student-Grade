@@ -65,6 +65,7 @@
             this.btnCalculate.TabIndex = 0;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnClear
             // 
@@ -174,7 +175,6 @@
             this.gbxResults.TabIndex = 11;
             this.gbxResults.TabStop = false;
             this.gbxResults.Text = "Results";
-           
             // 
             // lblStudentGradeResult
             // 
@@ -195,7 +195,7 @@
             // lblStudentDetailsResults
             // 
             this.lblStudentDetailsResults.AutoSize = true;
-            this.lblStudentDetailsResults.BackColor = System.Drawing.SystemColors.Window;
+            this.lblStudentDetailsResults.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentDetailsResults.Location = new System.Drawing.Point(276, 43);
             this.lblStudentDetailsResults.Name = "lblStudentDetailsResults";
             this.lblStudentDetailsResults.Size = new System.Drawing.Size(0, 20);
